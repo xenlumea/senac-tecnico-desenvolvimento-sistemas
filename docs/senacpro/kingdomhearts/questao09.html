@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+
+    <link rel="icon" href="./assets/img/kh-logo.svg" sizes="any" />
+    <link rel="icon" href="./assets/img/kh-logo.svg" sizes="any" />
+
+    <style>
+        #alternativas-container input[type='radio'] {
+            display: none;
+        }
+
+        #alternativas-container label {
+            width: 100%;
+        }
+
+        .selecionado {
+            color: black;
+            background-color: lightblue;
+        }
+
+        .opcao-correta {
+            color: black;
+            background-color: lightgreen;
+        }
+
+        .opcao-incorreta {
+            color: black;
+            background-color: lightcoral;
+        }
+    </style>
+
+    <script src="./questao09.js" defer></script>
+
+    <title>Quiz - 09</title>
+</head>
+
+<body class="min-vh-100 d-flex" style="
+            background-image: url('./assets/img/background-oficial.jpg');
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: initial;
+        ">
+    <main class="container d-flex flex-column justify-content-center align-items-center">
+        <p class="fs-3 text-light text-center border border-light my-1 p-1 w-100"
+            style="background-color: rgba(0, 0, 0, 0.6); text-align: justify">
+            Pontuação: <span id="total-pontos">0</span> pontos
+        </p>
+
+        <p style="color: #f4d190" class="fs-2 my-3 bg-black border border-light p-3 w-100 text-center">
+            Questão 9 - Qual Nobody utiliza uma grande foice como arma?
+        </p>
+
+        <div id="alternativas-container"
+            class="my-2 d-flex justify-content-center flex-column gap-3 border border-light w-100 p-5 mb-4"
+            style="background-color: rgba(0, 0, 0, 0.6)">
+            <div class="text-center" id="mensagem">
+                <p class="text-light fs-5">Clique em uma alternativa e depois clique no botão confirmar</p>
+            </div>
+
+            <div class="form-check border border-light text-light text-center p-0">
+                <label class="fs-2 form-check-label text-align p-0" for="alternativa1">
+                    Marluxia
+                    <input class="form-check-input" type="radio" name="alternativas" id="alternativa1"
+                        value="marluxia" />
+                </label>
+            </div>
+
+            <div class="form-check border border-light text-light text-center p-0">
+                <label class="fs-2 form-check-label" for="alternativa3">
+                    Reaper
+
+                    <input class="form-check-input" type="radio" name="alternativas" id="alternativa3" value="reaper" />
+                </label>
+            </div>
+
+            <div class="form-check border border-light text-light text-center p-0">
+                <label class="fs-2 form-check-label" for="alternativa2">
+                    Axel
+                    <input class="form-check-input" type="radio" name="alternativas" id="alternativa2"
+                        value="axel" /></label>
+            </div>
+
+            <div class="form-check border border-light text-light text-center p-0">
+                <label class="fs-2 form-check-label" for="alternativa4">
+                    Vanitas
+                    <input class="form-check-input" type="radio" name="alternativas" id="alternativa4"
+                        value="vanitas" />
+                </label>
+            </div>
+
+            <button id="confirmar-alternativa" class="mt-2 fs-5 btn btn-success align-self-center w-100"
+                style="max-width: 300px">
+                Confirmar
+            </button>
+        </div>
+
+        <div class="my-3 d-flex justify-content-center gap-5 border border-light w-100 p-3 mb-4"
+            style="background-color: rgba(0, 0, 0, 0.6)">
+            <a href="./questao10.html" class="fs-5 btn btn-info w-100" style="max-width: 300px"> Próximo </a>
+        </div>
+
+        <div class="d-flex justify-content-center gap-5 border border-light w-100 p-3"
+            style="background-color: rgba(0, 0, 0, 0.6)">
+            <a class="btn btn-danger w-100" style="max-width: 300px" href="./index.html">
+                Página inicial - Kingdom Hearts</a>
+        </div>
+    </main>
+</body>
+
+</html>

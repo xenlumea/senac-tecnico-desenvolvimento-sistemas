@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <script src="./produto.js" defer></script>
+    <title>Produto</title>
+</head>
+
+<body class="min-vh-100 d-flex flex-column justify-content align-items" style="
+            background-image: url(./assets/img/produto/supermercado.jpg);
+            background-size: cover;
+            backdrop-filter: blur(5px);
+        ">
+    <div class="container bg-secondary-subtle py-3 mt-3 d-flex flex-column flex-grow-1 rounded-3"
+        style="width: fit-content">
+        <h1 class="text-center text-light bg-secondary rounded-3 mb-3">Produtos</h1>
+
+        <div class="d-flex flex-wrap bg-secondary py-3 justify-content-center align-items-center rounded-3">
+            <div class="mx-3">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Nome</span>
+                    <input id="nome" type="text" class="form-control" placeholder="Nome do produto" />
+                </div>
+
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="tipo-produto">Tipo</label>
+                    <select class="form-select" id="tipo-produto">
+                        <option selected value="PADRAO">Escolha um tipo</option>
+                        <option value="A">Alimento</option>
+                        <option value="B">Bebida</option>
+                        <option value="H">Hortifruti</option>
+                        <option value="L">Limpeza</option>
+                    </select>
+                </div>
+
+                <div id="radios" class="border bg-white mb-3 rounded-3">
+                    <p class="text-center my-0 border-bottom border-dark">Prateleira</p>
+                    <div class="d-flex justify-content-around p-2 bg-secondary-subtle">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="setor" id="setor-a" value="setora"
+                                checked />
+                            <label class="form-check-label" for="setor-a"> Setor A </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="setor" id="setor-b" value="setorb" />
+                            <label class="form-check-label" for="setor-b"> Setor B </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Preço unitário</span>
+                    <input id="preco-unitario" type="text" class="form-control" value="0.00" />
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Estoque</span>
+                    <input id="estoque" type="number" class="form-control" value="0" />
+                </div>
+
+                <div class="text-center mb-2 d-flex justify-content-around">
+                    <button type="button" id="calcular" class="btn btn-success">Calcular</button>
+                    <button type="button" id="fechar" class="btn btn-warning">Fechar</button>
+                </div>
+            </div>
+
+            <div class="m-3">
+                <img id="imagem-produto" class="border border-3 border-dark" alt="Imagem do produto"
+                    src="./assets/img/produto/padrao.jpg" style="min-width: 100%; max-width: 300px; height: auto" />
+            </div>
+        </div>
+
+        <div id="area-resultado" class="flex-grow-1 bg-secondary rounded-3 mt-3 p-2">
+            <h2 class="text-center text-light bg-dark rounded-3 mb-3">Resultados</h2>
+            <div id="resultados"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container my-3">
+            <a href="./js.html">
+                <button type="button" class="btn btn-danger">Voltar</button>
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <script defer src="./a13.js"></script>
+    <title>A13 - Calcular média</title>
+</head>
+
+<body style="background-image: url(assets/a13-media.jpg)">
+    <!--
+         13)  Faça um algoritmo que leia dois números. Calcule a média dos dois números e exiba “Menor que 6” se a média for menor que 6; exiba “Maior que 6” se a média for maior que 6; exiba “Igual a 6” se a média for igual a 6.
+        -->
+    <div class="container rounded-2" style="margin-top: 100px; background-color: lightblue; padding: 20px">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <label for="numero1">Primeiro número</label>
+            <input class="form-control" id="numero1" type="text" style="width: 200px" />
+
+            <label for="numero2">Segundo número</label>
+            <input class="form-control" id="numero2" type="text" style="width: 200px" />
+
+            <button id="calcular" type="button" class="btn btn-success" style="width: 200px; margin-top: 10px">
+                CALCULAR MÉDIA
+            </button>
+
+            <div class="jumbotron" style="margin-top: 10px">
+                <h2 id="resultado-media" class="rounded-2"
+                    style="background-color: white; width: 200px; text-align: center">
+                    =
+                </h2>
+            </div>
+
+            <div class="jumbotron" style="margin-top: 10px">
+                <h2 id="resultado-mensagem" class="rounded-2"
+                    style="background-color: white; width: 300px; text-align: center">
+                    Mensagem
+                </h2>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container my-3">
+            <a href="./js.html">
+                <button type="button" class="btn btn-danger">Voltar</button>
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.842);
+    display: flex;
+    width: 100%;
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+img {
+    border: 10px solid black;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+pre {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.sobre {
+    margin: 0 50px;
+    text-align: justify;
+}

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <script src="./calculo.js" defer></script>
+    <title>Cálculo</title>
+
+    <style>
+        /*AJUDA DA IA GEMINI*/
+        /* Ensures html and body lock strictly to the viewport height */
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+            /* Prevents outer page scrolling */
+        }
+
+        .input-group .input-group-text {
+            min-width: 100px;
+        }
+    </style>
+</head>
+
+<body class="vh-100 d-flex flex-column pt-3" style="
+            background-image: url(./assets/img/folha/fundo-dinheiro.jpg);
+            background-size: cover;
+            backdrop-filter: blur(6px);
+        ">
+    <!-- Removed mt-3 and added overflow-hidden to body to trap height within the screen
+    MARGIN QUEBRAVA O LAYOUT, PASSEI A USAR PADDING PARA DESCOLAR A DIV DO TOPO DA JANELA
+-->
+    <div class="container bg-dark py-3 flex-grow-1 d-flex flex-column rounded-3 overflow-hidden" style="min-height: 0">
+        <h1 class="text-center text-light bg-secondary rounded-3">Cálculo</h1>
+
+        <div class="form-text text-light fs-3 text-center">
+            <label for="salario-bruto"> Digite o salário</label>
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">R$</span>
+            <input id="salario-bruto" type="text" class="form-control" value="0.00" />
+            <button type="button" class="btn btn-success" id="salvar">Salvar</button>
+        </div>
+
+        <!-- Scrollable list container
+            IA ADICIONOU style="min-height: 0; overflow-y: auto;" pois flex não aceitar diminuir além do conteudo, min-height muda a configuração padrão do flex. overflow-y: auto permite rolagem só quando os filhos ultrapassam a altura do pai.
+        -->
+        <ul class="list-group mb-2 flex-grow-1" style="min-height: 0; overflow-y: auto" id="lista-de-salarios"></ul>
+
+        <div class="mt-auto">
+            <div class="d-flex col gap-2 justify-content-evenly">
+                <div class="row">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text justify-content-center bg-success text-light">Soma: </span>
+                        <input disabled id="total-somado" type="text" class="form-control"
+                            style="background-color: lightgreen" value="-" />
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text justify-content-center bg-info">Média: </span>
+                        <input disabled id="media-calculada" type="text" class="form-control" value="-"
+                            style="background-color: lightblue" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text justify-content-center bg-warning">Menor:</span>
+                        <input disabled id="menor" type="text" class="form-control" value="-"
+                            style="background-color: rgb(231, 231, 76)" />
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text justify-content-center"
+                            style="background-color: rgb(228, 91, 91)">Maior:</span>
+                        <input disabled id="maior" type="text" class="form-control" value="-"
+                            style="background-color: lightcoral" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-evenly gap-3">
+                <button type="button" class="btn btn-success flex-grow-1" id="somar-total">Somar Total</button>
+                <button type="button" class="btn btn-info flex-grow-1" id="calcular-media">Calcular Média</button>
+                <button type="button" class="btn btn-warning flex-grow-1" id="btn-menor">Menor Salário</button>
+                <button type="button" class="btn btn-danger flex-grow-1" id="btn-maior">Maior Salário</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container my-3">
+            <a href="./js.html">
+                <button type="button" class="btn btn-danger">Voltar</button>
+            </a>
+        </div>
+    </footer>
+
+    <!-- EXPLICAÇÃO DA IA PARA OVERFLOW
+How Overflow Interaction Works
+
+When you combine overflow: hidden on a parent container with overflow-y: auto on a child element, you are creating a strict layout containment system. This prevents content from spilling out of the screen while giving specific elements their own dedicated scrollable area.
+
+The Parent's Role (overflow: hidden)
+
+Stops Expansion: It acts as a hard boundary. It tells the browser: “No matter how much content is placed inside me, my outer dimensions are locked. Do not grow.”
+
+Clips Spills: Any content or element that tries to push past the parent’s outer edge would normally be cut off (hidden), unless a child element explicitly handles its own overflow.
+
+The Child's Role (overflow-y: auto + Flexbox)
+
+Calculates Remaining Space: Because the parent has a fixed height and won't expand, flexbox (flex-grow: 1) allows the child element to stretch and fill the exact remaining pixel space between other elements.
+
+Overrides Min-Height Constraints: Adding min-height: 0 is critical here. By default, HTML elements refuse to shrink smaller than their internal content. This rule tells the browser the child is allowed to compress to fit the available space.
+
+Generates a Scroll Context: Once the child is locked into that precise boundary, it stops pushing its content outward. Instead, it recognizes when its internal items (like a long list of rows) exceed its assigned height, and it turns on an internal vertical scrollbar.
+
+The Result
+The parent stays locked to the screen height, the header and footer stay fixed in place, and only the specific child element scrolls when its contents grow too large.
+-->
+</body>
+
+</html>

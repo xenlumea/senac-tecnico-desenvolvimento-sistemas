@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <script src="./jokenpo.js" defer></script>
+    <title>JoKenPo</title>
+</head>
+
+<body class="container min-vh-100 d-flex flex-column justify-content-center align-items-center"
+    style="background-color: #936645">
+    <div class="container rounded-2 py-2" style="background-color: #7a4e47">
+        <h1 class="shadow py-0 my-2 rounded text-center" style="background-color: #dba367">
+            Pedra, Papel e Tesoura (JoKenPô)
+        </h1>
+
+        <div class="row">
+            <div class="container row mx-0 gap-3">
+                <div class="col text-center rounded-2" style="background-color: #dba367">
+                    <button id="botao-pedra" type="button" class="btn" style="max-width: 300px">
+                        <img id="imagem-pedra" src="./assets/img/jokenpo/pedra.jpg" class="my-3"
+                            style="max-width: 100%; height: auto" />
+                    </button>
+                </div>
+
+                <div class="col text-center rounded-2" style="background-color: #dba367">
+                    <button id="botao-papel" type="button" class="btn" style="max-width: 300px">
+                        <img id="imagem-papel" src="./assets/img/jokenpo/papel.jpg" class="my-3"
+                            style="max-width: 100%; height: auto" />
+                    </button>
+                </div>
+
+                <div class="col text-center rounded-2" style="background-color: #dba367">
+                    <button id="botao-tesoura" type="button" class="btn" style="max-width: 300px">
+                        <img id="imagem-tesoura" src="./assets/img/jokenpo/tesoura.jpg" class="my-3"
+                            style="max-width: 100%; height: auto" />
+                    </button>
+                </div>
+            </div>
+
+            <div class="container row mx-0 my-2 gap-3">
+                <div class="col text-center rounded-2" style="background-color: #dba367">
+                    <h2>Você</h2>
+                    <div class="mx-auto" style="max-width: 300px">
+                        <img id="imagem-jogador" src="./assets/img/jokenpo/jokenpo.jpg" class="my-2"
+                            style="max-width: 100%; height: auto" />
+                    </div>
+                </div>
+
+                <div class="col text-center rounded-2" style="background-color: #dba367">
+                    <h2>Computador</h2>
+                    <div class="mx-auto" style="max-width: 300px">
+                        <img id="imagem-computador" src="./assets/img/jokenpo/jokenpo.jpg" class="my-2"
+                            style="max-width: 100%; height: auto" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="shadow p-3 my-2 rounded" style="background-color: #dba367">
+            Resultado: <span id="resultado"></span>
+        </p>
+    </div>
+
+    <footer style="align-self: flex-start">
+        <div class="container my-3">
+            <a href="./js.html">
+                <button type="button" class="btn btn-success">Voltar</button>
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>

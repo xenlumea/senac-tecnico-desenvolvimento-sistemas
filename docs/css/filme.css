@@ -1,0 +1,93 @@
+body {
+    background-color: grey;
+}
+
+/* INFORMAÇÕES */
+.informacoes-container {
+    background-color: purple;
+    padding: 20px;
+    margin: 20px 0 20px 0px;
+}
+
+.titulo-filme {
+    background-color: white;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.img-poster {
+    margin: 20px;
+    border: solid 10px white;
+}
+
+.sinopse {
+    background-color: white;
+    text-align: justify;
+    padding: 20px;
+}
+
+/* PERSONAGENS E CURIOSIDADE */
+
+.personagens-curiosidades {
+    background-color: purple;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px 10px 20px 10px;
+    width: 100%;
+}
+
+.container-card-personagem {
+    padding: 10px;
+}
+
+.card-personagem {
+    margin: 5px;
+    padding: 0;
+    border: 5px black solid;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.imagem-personagem {
+    width: 100%;
+    height: auto;
+}
+
+.nome-personagem {
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+.curiosidade {
+    background-color: white;
+    padding: 20px;
+    border: 5px black solid;
+    border-radius: 25px;
+}
+
+.curiosidade p {
+    text-align: justify;
+}
+
+/* CENAS DO FILME*/
+
+.container-imagens-filme {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: purple;
+    margin-bottom: 25px;
+    padding: 25px 10px 25px 10px;
+    gap: 15px;
+}
+
+.container-imagens-filme img {
+    flex: 1 1 auto;
+    border: solid white 2px;
+    min-width: 0%;
+    max-width: 100%;
+    height: auto;
+}

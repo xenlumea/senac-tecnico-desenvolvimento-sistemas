@@ -1,0 +1,36 @@
+body {
+    height: 100vh;
+    min-height: min-content;
+    background-image: url(../assets/fundo-tec.jpg);
+    background-size: cover;
+    backdrop-filter: blur(4px);
+}
+
+.container-conteudo {
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: fit-content;
+}
+
+.titulo-container {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.javascript-logo {
+    height: auto;
+    width: 200px;
+}
+
+.titulo-container h1 {
+    color: white;
+}
+
+.container-links a {
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.container-links a button {
+    width: 100%;
+}
