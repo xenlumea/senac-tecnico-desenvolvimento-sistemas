@@ -1,0 +1,55 @@
+SELECT
+  *
+FROM
+  CLIENTE
+WHERE
+  VALORCREDITO BETWEEN 3000 AND 3500;
+
+
+-- ORDER BY VALORCREDITO ASC;
+SELECT
+  *
+FROM
+  CLIENTE
+WHERE
+  IDCIDADE = 3
+  OR IDCIDADE = 19;
+
+
+SELECT
+  *
+FROM
+  CLIENTE
+ORDER BY
+  idcidade ASC,
+  valorcredito DESC;
+
+
+SELECT
+  *
+FROM
+  CLIENTE
+WHERE
+  strftime ("%m", datanascimento) = "07";
+
+
+SELECT
+  *
+FROM
+  CLIENTE
+WHERE
+  strftime ("%Y", datanascimento) BETWEEN "1980" AND "1989"
+ORDER BY
+  DATANASCIMENTO;
+
+
+SELECT
+  NOME,
+  DATANASCIMENTO,
+  VALORCREDITO / 2 AS METADE
+FROM
+  CLIENTE
+WHERE
+  strftime ("%Y", datanascimento) BETWEEN "1980" AND "1989"
+ORDER BY
+  2;

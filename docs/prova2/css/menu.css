@@ -1,0 +1,36 @@
+body {
+    background-color: #362417;
+}
+
+h1,
+main>div>div {
+    border: solid 5px #ad7958;
+}
+
+a {
+    text-decoration: 0;
+    color: rgb(53, 53, 53);
+}
+
+figure {
+    background-color: #ad7958;
+    max-width: 200px;
+    font-weight: bold;
+}
+
+figcaption {
+    text-align: center;
+}
+
+img {
+    margin-bottom: 16px;
+    border-radius: 50%;
+    border: 8px solid antiquewhite;
+}
+
+a figure img,
+a figure figcaption,
+#titulo,
+.links-container {
+    background-color: antiquewhite;
+}

@@ -1,5 +1,7 @@
 const pontosSpan = document.getElementById('pontos');
 const listaQuestoes = document.getElementById('lista-questoes');
+const btnEnviar = document.getElementById('btn-enviar');
+const formRodape = document.getElementById('form-rodape');
 
 function exibeResultado() {
     let resultados = JSON.parse(localStorage.getItem('@senacpro_questoes')) || {
@@ -43,3 +45,12 @@ function exibeResultado() {
 }
 
 exibeResultado();
+
+function enviarContato(e) {
+    e.preventDefault();
+    btnEnviar.disabled = true;
+
+    formRodape.innerHTML = '<p class="bg-success text-light fs-5 m-1 py-1 w-100">Informações enviadas com sucesso!</p>';
+}
+
+btnEnviar.addEventListener('click', enviarContato);

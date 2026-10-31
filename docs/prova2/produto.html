@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/produto.css" />
+    <link rel="shortcut icon" href="./assets/img/favicon/favicon-cake.png" type="image/png" />
+    <title>Produtos</title>
+</head>
+
+<body class="container min-vh-100 d-flex flex-column mb-3">
+    <header class="my-3 text-center p-2 rounded-pill">
+        <h1 class="m-0 p-0 rounded-pill">Produtos</h1>
+    </header>
+
+    <main class="d-flex flex-column gap-3 flex-grow-1 h-100 p-2 rounded-3">
+        <section id="inputs-container" class="d-flex flex-wrap gap-3 p-3 rounded-3">
+            <div>
+                <label for="produto-parcial" class="form-label"> Produto parcial</label>
+                <input type="text" class="form-control" id="produto-parcial" />
+            </div>
+
+            <div>
+                <label for="codigo-barras" class="form-label"> Código de barras</label>
+                <input type="text" class="form-control" id="codigo-barras" />
+            </div>
+
+            <div>
+                <label for="grupos" class="form-label"> Grupo</label>
+                <select id="grupos" class="form-select">
+                    <option selected>Todos os grupos</option>
+                    <option value="1">GRUPO 1</option>
+                    <option value="2">GRUPO 2</option>
+                    <option value="3">GRUPO 3</option>
+                </select>
+            </div>
+
+            <div class="d-flex gap-3 flex-wrap">
+                <div>
+                    <label for="data-inicial" class="form-label"> Data de</label>
+                    <input type="date" class="form-control" id="data-inicial" />
+                </div>
+                <div>
+                    <label for="data-final" class="form-label"> Data até</label>
+                    <input type="date" class="form-control" id="data-final" />
+                </div>
+            </div>
+
+            <div class="d-flex gap-3 flex-wrap">
+                <div>
+                    <label for="preco-inicial" class="form-label"> Preço de</label>
+                    <input type="text" class="form-control" id="preco-inicial" />
+                </div>
+                <div>
+                    <label for="preco-final" class="form-label"> Preço até</label>
+                    <input type="text" class="form-control" id="preco-final" />
+                </div>
+
+                <div id="radios-container" class="d-flex justify-content-center gap-3 align-items-end">
+                    <div class="form-check d-flex justify-content-center align-items-center">
+                        <input class="form-check-input" type="radio" name="opcoes-radio" id="codigo-radio"
+                            value="codigo" checked />
+                        <label class="form-check-label" for="codigo-radio"> Código </label>
+                    </div>
+                    <div class="form-check d-flex justify-content-center align-items-center">
+                        <input class="form-check-input" type="radio" name="opcoes-radio" id="nome-radio" value="nome" />
+                        <label class="form-check-label" for="nome-radio"> Nome </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="buttons-container" class="d-flex justify-content-evenly align-items-center flex-wrap rounded-3">
+            <button type="button" class="btn btn-success my-2">Incluir</button>
+            <button type="button" class="btn btn-info my-2">Consultar</button>
+            <button type="button" class="btn btn-warning my-2">Limpar</button>
+            <a href="./menu.html" class="btn btn-danger my-2"> Menu</a>
+        </section>
+
+        <section id="resultado-container" class="flex-grow-1 p-2 rounded-3">
+            <p style="visibility: hidden">PLACEHOLDER</p>
+        </section>
+    </main>
+</body>
+
+</html>

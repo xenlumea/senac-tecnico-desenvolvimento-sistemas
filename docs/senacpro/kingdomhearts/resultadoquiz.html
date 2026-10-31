@@ -29,8 +29,7 @@
             <h1 style="color: #f4d190" class="flex-grow-1 text-center">Resultado do Quiz</h1>
         </div>
 
-        <div class="flex-grow-1 text-light border border-light p-1 mb-2 w-100 d-flex flex-column align-items-center"
-            style="
+        <div class="text-light border border-light p-1 my-2 w-100 d-flex flex-column align-items-center" style="
                     background-image:
                         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
                         url('./assets/img/box-art/kh2-dark-box-art.jpg');
@@ -38,20 +37,47 @@
                     background-position: top;
                     background-size: cover;
                 ">
-            <div class="p-2 text-center">
+            <div class="my-3 text-center">
                 <h2 class="fs-1">Parabéns por finalizar o quiz!</h2>
 
                 <p class="fs-3">Você acertou <span id="pontos">0</span> de 10 questões!</p>
 
-                <ul id="lista-questoes" class="d-flex flex-column gap-4 fs-5" style="list-style: none"></ul>
+                <ul id="lista-questoes" class="d-flex flex-column gap-4 fs-5 m-0 p-0" style="list-style: none"></ul>
             </div>
+        </div>
+
+        <div class="text-light border border-light py-3 my-3 w-100 d-flex flex-column align-items-center"
+            style="background-color: rgba(0, 0, 0, 0.6)">
+            <form class="w-100 text-center px-5" style="max-width: 600px">
+                <h2 class="fs-1 text-center mb-3">Contato</h2>
+
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="nome">Nome</label>
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome" />
+                </div>
+
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="contato">Telefone</label>
+                    <input type="tel" class="form-control" id="contato" name="contato" placeholder="Seu número" />
+                </div>
+
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="quiz">Quiz</label>
+                    <input disabled type="text" class="form-control" id="quiz" name="quiz" value="Kingdom Hearts" />
+                </div>
+
+                <div id="form-rodape" class="m-0 p-0 d-flex justify-content-center align-items-center"
+                    style="height: 50px">
+                    <button type="submit" class="btn btn-primary fs-5 py-1 m-1" id="btn-enviar">Enviar</button>
+                </div>
+            </form>
         </div>
 
         <div class="my-2 d-flex justify-content-center gap-5 border border-light w-100 p-3 mb-4"
             style="background-color: rgba(0, 0, 0, 0.6)">
-            <a class="btn btn-warning" href="../../../index.html"> Página do Emanuel </a>
-
             <a class="btn btn-success" href="./index.html"> Página inicial - Kingdom Hearts </a>
+
+            <a class="btn btn-info" href="./jogo-da-memoria/index.html"> Jogo da memória </a>
 
             <a class="btn btn-danger" href="https://curtaaulacurta.com.br/senacpro/index.html">
                 Voltar para SENAC PRO

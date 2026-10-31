@@ -1,0 +1,139 @@
+body {
+    background-color: #362417;
+    font-family:
+        system-ui,
+        -apple-system,
+        'Segoe UI',
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+}
+
+header,
+main,
+footer {
+    max-width: 1100px;
+}
+
+.tema-borda {
+    border: solid 5px #ad7958;
+}
+
+.tema-painel {
+    background-color: #ad7958;
+}
+
+.tema-fundo-creme {
+    background-color: antiquewhite;
+}
+
+.tema-texto-escuro {
+    color: #362417;
+}
+
+/* Título */
+.titulo-box {
+    background-color: #ad7958;
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* Logo */
+.logo-container {
+    max-width: 90px;
+    background-color: #ad7958;
+}
+
+.logo-container img {
+    border: 3px solid antiquewhite;
+}
+
+/* Formulário e seções */
+#form-grupos,
+#filtros-container,
+#buttons-container,
+#resultado-container,
+#estatisticas-container {
+    background-color: antiquewhite;
+}
+
+/* Cards informativos */
+.stat-card {
+    background-color: #ffffff;
+    border: 2px solid #ad7958;
+    border-radius: 12px;
+    padding: 10px 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card .numero {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ad7958;
+}
+
+/* Tabela */
+.table-grupos {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table-grupos thead th {
+    background-color: #ad7958;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+}
+
+.table-grupos tbody td {
+    vertical-align: middle;
+    background-color: #ffffff;
+}
+
+.table-grupos tbody tr:hover td {
+    background-color: #fdf5eb;
+}
+
+/* Badges */
+.badge-ativo {
+    background-color: #198754;
+    color: #ffffff;
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.badge-inativo {
+    background-color: #dc3545;
+    color: #ffffff;
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+/* Ações */
+.btn-acao {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.85rem;
+    padding: 4px 10px;
+}
+
+/* Transições suaves */
+.btn,
+.form-control,
+.form-select {
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}

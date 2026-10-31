@@ -1,0 +1,28 @@
+body {
+    background-color: #362417;
+}
+
+main,
+header {
+    background-color: #ad7958;
+}
+
+header h1,
+#buttons-container,
+#inputs-container,
+#resultado-container,
+#botao-voltar-container {
+    background-color: antiquewhite;
+}
+
+#resultado-container {
+    min-height: 200px;
+}
+
+#inputs-container div {
+    flex-grow: 1;
+}
+
+#radios-container div {
+    flex-grow: unset;
+}
