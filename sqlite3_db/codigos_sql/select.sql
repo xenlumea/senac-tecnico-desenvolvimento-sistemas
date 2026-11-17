@@ -1,54 +1,49 @@
 SELECT
   *
 FROM
-  CLIENTE
+  cliente
 WHERE
-  VALORCREDITO BETWEEN 3000 AND 3500;
-
+  valorcredito BETWEEN 3000 AND 3500;
 
 -- ORDER BY VALORCREDITO ASC;
 SELECT
   *
 FROM
-  CLIENTE
+  cliente
 WHERE
-  IDCIDADE = 3
-  OR IDCIDADE = 19;
-
+  idcidade = 3
+  OR idcidade = 19;
 
 SELECT
   *
 FROM
-  CLIENTE
+  cliente
 ORDER BY
   idcidade ASC,
   valorcredito DESC;
 
-
 SELECT
   *
 FROM
-  CLIENTE
+  cliente
 WHERE
   strftime ("%m", datanascimento) = "07";
 
-
 SELECT
   *
 FROM
-  CLIENTE
+  cliente
 WHERE
   strftime ("%Y", datanascimento) BETWEEN "1980" AND "1989"
 ORDER BY
-  DATANASCIMENTO;
-
+  datanascimento;
 
 SELECT
-  NOME,
-  DATANASCIMENTO,
-  VALORCREDITO / 2 AS METADE
+  nome,
+  datanascimento,
+  valorcredito / 2 AS metade
 FROM
-  CLIENTE
+  cliente
 WHERE
   strftime ("%Y", datanascimento) BETWEEN "1980" AND "1989"
 ORDER BY

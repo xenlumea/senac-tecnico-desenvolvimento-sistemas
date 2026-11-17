@@ -1,0 +1,25 @@
+/*
+body {
+    /* background-color: #9bb2ff; */
+/* background-color: #cecece;*/
+/* mysql blue  #00758F orange #F29111 */
+
+.img-container {
+    overflow: hidden;
+    max-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo,
+.img-container,
+.links-container {
+    border: solid #d89135 4px;
+    background-color: white;
+}
+
+a {
+    max-width: 200px;
+    text-decoration: none;
+}

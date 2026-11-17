@@ -7,7 +7,6 @@ FROM
 GROUP BY
   idcidade;
 
-
 -- 18. Exiba quantos clientes por estado. Exiba a sigla
 SELECT
   COUNT(*) AS total_clientes,
@@ -21,7 +20,6 @@ GROUP BY
 ORDER BY
   total_clientes;
 
-
 -- 19. Exiba os aniversariantes de fevereiro e março
 SELECT
   *,
@@ -32,7 +30,6 @@ WHERE
   strftime ("%m", dtnascimento) IN ("02", "03")
 ORDER BY
   mes;
-
 
 -- 20. Exiba os aniversariantes de abril, agosto ou novembro
 SELECT
@@ -45,15 +42,13 @@ WHERE
 ORDER BY
   mes;
 
-
 -- 21. Qual é a soma do valor a pagar dos recebimentos vendidos em janeiro de 2021?
 SELECT
   SUM(valorpagar) AS total_janeiro
 FROM
   recebimento
 WHERE
-  strftime ("%Y-%m", DTVENDA) = "2021-01";
-
+  strftime ("%Y-%m", dtvenda) = "2021-01";
 
 -- 22. Qual é média do valor a pagar e quantos recebimentos gerados com venda em março e abril de 2021?
 SELECT
@@ -62,36 +57,34 @@ SELECT
 FROM
   recebimento
 WHERE
-  strftime ("%Y-%m", DTVENDA) = "2021-03"
-  OR strftime ("%Y-%m", DTVENDA) = "2021-04";
-
+  strftime ("%Y-%m", dtvenda) = "2021-03"
+  OR strftime ("%Y-%m", dtvenda) = "2021-04";
 
 -- 23. Qual é a soma dos recebimentos em DINHEIRO, CARTAO DE CREDITO e DUPLICATA em abril e maio de 2021?
 SELECT
-  SUM(recebimento.VALORPAGAR) AS soma_recebimentos,
+  SUM(recebimento.valorpagar) AS soma_recebimentos,
   tipopagto.nome
 FROM
   recebimento
-  INNER JOIN tipopagto ON RECEBIMENTO.IDTIPOPAGTO = tipopagto.id
+  INNER JOIN tipopagto ON recebimento.idtipopagto = tipopagto.id
 WHERE
-  (RECEBIMENTO.IDTIPOPAGTO IN (1, 4, 6))
+  (recebimento.idtipopagto IN (1, 4, 6))
   AND (
-    strftime ("%Y-%m", DTVENDA) = "2021-04"
-    OR strftime ("%Y-%m", DTVENDA) = "2021-05"
+    strftime ("%Y-%m", dtvenda) = "2021-04"
+    OR strftime ("%Y-%m", dtvenda) = "2021-05"
   )
 GROUP BY
   tipopagto.id;
 
-
 -- 24. Qual é o nome dos clientes e a soma a pagar dos devedores na segunda quinzena de agosto de 2021?
 SELECT
   cliente.nome,
-  SUM(recebimento.VALORPAGAR)
+  SUM(recebimento.valorpagar)
 FROM
   cliente
-  INNER JOIN recebimento ON cliente.id = recebimento.IDCLIENTE
+  INNER JOIN recebimento ON cliente.id = recebimento.idcliente
 WHERE
-  strftime ("%Y-%m", DTVENDA) = "2021-08"
-  AND strftime ("%d", DTVENDA) >= "15"
+  strftime ("%Y-%m", dtvenda) = "2021-08"
+  AND strftime ("%d", dtvenda) >= "15"
 GROUP BY
   recebimento.idcliente;

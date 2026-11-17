@@ -1,0 +1,30 @@
+body {
+    /* background-color: #9bb2ff; */
+    background-color: #cecece;
+    /* mysql blue  #00758F orange #F29111 */
+
+}
+
+code {
+    color: blue;
+}
+
+img {
+    max-height: 500px;
+}
+
+header #img-container,
+header h1,
+#subtitulo,
+.container-atividade,
+footer {
+    border: solid #d89135 4px
+}
+
+#atividade {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}

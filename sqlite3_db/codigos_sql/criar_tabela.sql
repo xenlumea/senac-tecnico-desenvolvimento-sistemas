@@ -1,5 +1,5 @@
 CREATE TABLE produto (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id INTEGER PRIMARY key autoincrement,
     nome VARCHAR(100),
     preco DECIMAL(10, 2),
     precopro DECIMAL(10, 2),
